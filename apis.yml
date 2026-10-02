@@ -1,0 +1,30 @@
+aid: chargealong
+name: Chargealong.io
+description: 'Chargealong.io is a company surfaced via the API Evangelist harvest backlog (source: new-submission)
+  and added to the network as a stub for full-pipeline profiling.'
+url: https://raw.githubusercontent.com/api-evangelist/chargealong/refs/heads/main/apis.yml
+x-type: company
+x-source: harvest:new-submission
+x-tier: stub
+x-tier-reason: harvest
+specificationVersion: '0.20'
+created: '2026-10-02'
+modified: '2026-10-02'
+tags:
+- Company
+apis: []
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+- FN: APIs.json
+  email: info@apis.io
+common:
+- type: Website
+  url: https://chargealong.io
+- type: Documentation
+  url: https://chargealong.io/docs/
+x-submission-notes: Free, keyless public EV charging site data API (Australia). Same operator pattern
+  as postfinder/locio (postmaster@, submitted within a minute).
+x-submission-probe: root 200; docs 200; api.chargealong.io/v1/openapi.json OpenAPI 3.1.0 15 paths; /v1/countries
+  200 JSON; llms.txt 200; 404 probe 404
+x-submitted-by: postmaster@chargealong.io (apis.io/add, 2026-10-02)
