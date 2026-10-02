@@ -1,30 +1,88 @@
 aid: chargealong
+
 name: Chargealong.io
-description: 'Chargealong.io is a company surfaced via the API Evangelist harvest backlog (source: new-submission)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://chargealong.io/og.png
+
+description: ChargeAlong provides free, keyless public EV charging site data across Australia and other countries. Users can query chargers by
+  location, plug type, power, price and network without an API key, accessing up‑to‑date open data curated from official sources and driver contributions.
+
 url: https://raw.githubusercontent.com/api-evangelist/chargealong/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:new-submission
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-02 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-02'
+
 modified: '2026-10-02'
+
 tags:
 - Company
-apis: []
+- EV
+- Charging
+- Data
+- Public API
+- Australia
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Conformance
+  url: conformance/chargealong-conformance.yml
+- type: LLMsTxt
+  url: llms/chargealong-llms.txt
+- type: Hosts
+  url: hosts/chargealong-hosts.yml
+- type: Vendors
+  url: vendors/chargealong-vendors.yml
+- type: SDKs
+  url: packages/chargealong-packages.yml
+- type: Packages
+  url: packages/chargealong-packages.yml
+- type: TermsOfService
+  url: https://chargealong.io/en/terms/
+- type: PrivacyPolicy
+  url: https://chargealong.io/en/privacy/
+- type: DeveloperPortal
+  url: https://api.chargealong.io</code
+- type: GitHubOrganization
+  url: https://github.com/chargealong
+- type: DomainSecurity
+  url: security/chargealong-domain-security.yml
 - type: Website
   url: https://chargealong.io
 - type: Documentation
   url: https://chargealong.io/docs/
-x-submission-notes: Free, keyless public EV charging site data API (Australia). Same operator pattern
-  as postfinder/locio (postmaster@, submitted within a minute).
-x-submission-probe: root 200; docs 200; api.chargealong.io/v1/openapi.json OpenAPI 3.1.0 15 paths; /v1/countries
-  200 JSON; llms.txt 200; 404 probe 404
+- type: APIReference
+  url: https://api.chargealong.io/v1/openapi.json
+
+apis:
+- name: ChargeAlong API
+  description: Public EV charging site data API, free and keyless.
+  humanURL: https://chargealong.io/docs/
+  baseURL: https://api.chargealong.io
+  aid: chargealong:chargealong-api
+
+x-submission-notes: Free, keyless public EV charging site data API (Australia). Same operator pattern as postfinder/locio (postmaster@, submitted
+  within a minute).
+
+x-submission-probe: root 200; docs 200; api.chargealong.io/v1/openapi.json OpenAPI 3.1.0 15 paths; /v1/countries 200 JSON; llms.txt 200; 404 probe
+  404
+
 x-submitted-by: postmaster@chargealong.io (apis.io/add, 2026-10-02)
+x-enrichment:
+  date: '2026-10-02'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

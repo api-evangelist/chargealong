@@ -1,0 +1,137 @@
+# ChargeAlong
+
+> Public EV charging sites, a page each: plugs, power, price, network, access and exactly where to stand. Built from open data, kept current from it, and corrected by drivers.
+
+Every country we hold chargers in is listed at the index below, down to the
+suburb. A page states what the record actually says and leaves out what it
+does not: no price is inferred, and no charger is described as working
+because it worked last year.
+
+## What the URLs mean
+
+- [Countries](https://chargealong.io/en/)
+- [One country, by state or region](https://chargealong.io/en/australia/)
+- [One region, by suburb](https://chargealong.io/en/australia/victoria/)
+- [One suburb: every charging site in it, mapped](https://chargealong.io/en/australia/victoria/sunshine/)
+- [A suburb narrowed to one thing](https://chargealong.io/en/australia/victoria/sunshine/ultra-fast/)
+- [Every network in a country](https://chargealong.io/en/australia/networks/)
+- [Guides](https://chargealong.io/en/guides/)
+- [Trip planner: A to B through chargers, in Australia, Canada, New Zealand, the United Kingdom and the United States](https://chargealong.io/en/trip-planner/)
+- [Electric cars: range, battery, charging times and charging curves](https://chargealong.io/en/vehicles/)
+
+A suburb is narrowed by speed (`ultra-fast`, `fast`, `ac`), by plug
+(`ccs2`, `chademo`, `type-2`, `nacs`, `type-1`, `gbt`) or by network
+(`tesla`, `evie-networks`, and the rest listed on the networks page). The
+last segment of the URL is the only thing that changes.
+
+A charging site's own page is
+`/en/<country>/<region>/<suburb>/<network>/<name>-<id>/`, where `<id>` is
+eight characters and permanent: a site keeps its address when its name or
+its network changes, and the old address redirects.
+
+## What a charging site's page states
+
+- Each plug: standard, AC or DC, power in kW, and how many of them.
+- The top power at the site, and the number of plugs in total.
+- The price as the operator publishes it, with their own words beside it.
+- The network and operator, the access notes, and whether it is public.
+- The address, the coordinates, and a map.
+- Whether drivers report it working, and when one last did.
+- The source record it came from, its licence, and when it was last seen.
+
+Each page carries the same facts as JSON-LD, so there is no need to read
+the prose to get them right.
+
+## Guides
+
+- [EV charging speeds: AC, fast and ultra fast](https://chargealong.io/en/guides/charging-speeds/): What AC, fast and ultra fast charging mean, how long a stop takes, and why your car sets the pace as much as the charger.
+- [EV plug types: CCS2, Type 2, CHAdeMO, NACS and more](https://chargealong.io/en/guides/plug-types/): Which charging plug your car uses, where each one is found, and what to check before you rely on an adapter.
+- [Where ChargeAlong's charger data comes from](https://chargealong.io/en/guides/where-the-data-comes-from/): ChargeAlong's charging sites come from Open Charge Map, government lists and Charge@Large. What we show, what we leave out, and how to correct a record.
+- [Planning a road trip in an electric car](https://chargealong.io/en/guides/planning-a-trip/): How to plan a long drive with the trip planner, why 300 to 400 km of range is plenty, and how to take the route into Google Maps, Apple Maps or CarPlay.
+- [How to choose an electric car](https://chargealong.io/en/guides/choosing-an-electric-car/): What matters when you choose an electric car: real range, charging speed and the curve, battery size, plugs and efficiency. Compare any two cars side by side.
+- [Charging on a road trip, the first time](https://chargealong.io/en/guides/charging-on-a-road-trip/): What happens at a public charger: starting a charge, paying, how long to stay, what to do when a charger is broken, and the manners that keep everyone moving.
+- [How long does it take to charge an electric car?](https://chargealong.io/en/guides/how-long-to-charge/): From a few hours at home to twenty minutes on a highway: how long each kind of charging takes, what sets the pace, and real figures for cars on ChargeAlong.
+- [How far can an electric car really go?](https://chargealong.io/en/guides/how-far-can-an-electric-car-go/): Rated range against the range you get: what speed, weather, load and driving style take off it, how to estimate yours, and why the answer is still far enough.
+- [Charging an electric car at home](https://chargealong.io/en/guides/charging-at-home/): A wall box or a socket, single or three phase, what it costs against petrol, off peak tariffs and solar, and what to do if you park on the street.
+- [Charging an electric car in Australia](https://chargealong.io/en/guides/charging-in-australia/): The charging networks, plugs and payment in Australia, what the highways are like between the cities, and where to look before a long drive.
+- [Charging an electric car in New Zealand](https://chargealong.io/en/guides/charging-in-new-zealand/): The charging networks, plugs and payment in New Zealand, what the state highways are like on both islands, and where to look before a long drive.
+- [Charging an electric car in the United Kingdom](https://chargealong.io/en/guides/charging-in-the-united-kingdom/): The charging networks, plugs and payment in the UK, what the motorways are like, and where to look before a long drive.
+- [Charging an electric car in the United States](https://chargealong.io/en/guides/charging-in-the-united-states/): The charging networks, plugs and payment in the United States, the move to NACS, what the interstates are like, and where to look before a long drive.
+- [Charging an electric car in Canada](https://chargealong.io/en/guides/charging-in-canada/): The charging networks, plugs and payment in Canada, what the Trans Canada and the winter are like, and where to look before a long drive.
+- [What it costs to charge an electric car](https://chargealong.io/en/guides/what-charging-costs/): Public and home charging, per kWh and per 100 km, against petrol; why fast charging costs more; and how the price on a charger's page is read.
+- [Electric cars in cold weather](https://chargealong.io/en/guides/electric-cars-in-cold-weather/): Why winter takes range off an electric car, how much, what a heat pump and preconditioning do about it, and how to charge and drive when it is cold.
+- [Towing and carrying loads with an electric car](https://chargealong.io/en/guides/towing-with-an-electric-car/): What towing does to range, which electric cars can tow and how much, charging with a trailer on, and planning a trip that tows.
+- [Buying a used electric car](https://chargealong.io/en/guides/buying-a-used-electric-car/): Battery health and how to check it, what the warranty still covers, the plugs and software to look for, and why a used electric car is often the better buy.
+- [Electric car words, explained](https://chargealong.io/en/guides/ev-glossary/): kW and kWh, state of charge, regen, LFP and NMC, V2L, OCPP and the rest: the words on a charger, a car page or a forum, in plain terms.
+
+## Planning a drive
+
+The trip planner takes a start, a destination and how far the car goes on
+a full battery, and answers with the road route, the charging stops along
+it and the charge the car arrives with. It never plans a leg that would
+put the car below the reserve the driver sets, so a trip that cannot be
+charged comes back as the stretch of road where it breaks rather than as a
+plan nobody could drive. It covers Australia, Canada, New Zealand, the United Kingdom and the United States, which is where the
+router holds roads.
+
+## Electric cars
+
+Every car has a page: what it carries, how far that goes, how long 10% to
+80% takes on a 50, 150 or 350 kW charger, and its charging curve drawn out,
+with the numbers behind the picture as a table. Charging times are worked
+out from each car's own curve, so a car's page and a trip planned in that
+car agree.
+
+Those figures are Open EV Data's (MIT, attribution required), not ours:
+credit "Open EV Data" if you reuse them. A curve the dataset marks as its
+own generic shape is labelled an estimate rather than that model's own.
+
+## Where the data comes from
+
+- Charging sites from Open Charge Map contributors, CC BY 4.0. Each site's page links the record it came from.
+- Charging sites in New South Wales from Transport for NSW's EV charging locations, CC BY 4.0.
+- Queensland Electric Super Highway stations from the Queensland Government, CC BY 4.0.
+- Places from GeoNames, CC BY 4.0.
+- Maps from OpenStreetMap contributors, ODbL.
+- Reviews and photos from ChargeAlong drivers. Photos are CC BY 4.0, credited to a ChargeAlong contributor.
+- Electric car specifications from Open EV Data, MIT licensed, attribution required.
+
+Some sites come from elsewhere again, Charge@Large among them. Each
+charging site's page names its own source and that source's licence, at the
+foot of the page, so take the terms from the page you are quoting.
+
+- [Full copyright notice](https://chargealong.io/en/copyright/)
+
+## The same data as data
+
+Free, keyless and read only. It answers the questions above directly,
+which beats reading a page for them.
+
+- [Chargers near a point](https://api.chargealong.io/v1/nearby?lat=-37.8136&lng=144.9631&min_kw=100): nearest first, with power, plugs, price and network.
+- [One suburb](https://api.chargealong.io/v1/localities/australia/victoria/sunshine): every charging site in it.
+- [A trip through chargers](https://api.chargealong.io/v1/trips/plan?from=-37.814,144.963&to=-33.869,151.209&range_km=450): the road route, the charging stops along it, and how long each one takes. It covers Australia, Canada, New Zealand, the United Kingdom and the United States.
+- [Electric cars](https://api.chargealong.io/v1/vehicles?q=model+3): usable battery, range, charging powers, plugs and the charging curve.
+- [One charging site](https://api.chargealong.io/v1/sites/abcd2345): the record behind a page.
+- [The networks in a country](https://api.chargealong.io/v1/countries/australia/networks): who operates chargers there.
+- [OpenAPI document](https://api.chargealong.io/v1/openapi.json): every endpoint, with its parameters and answers.
+- [API reference](https://chargealong.io/docs/): every endpoint with samples in curl, Node and Python, and how to connect the MCP server.
+
+For an agent that speaks MCP, https://api.chargealong.io/mcp is the same directory as tools,
+over Streamable HTTP, with no key and no account: find_chargers for what is
+nearest a coordinate and how fast it is, search_places to turn a suburb name
+into a coordinate, get_charger to read one site in full, and list_networks
+for who operates in a country. Every answer carries the page's URL and the
+date the record was last checked.
+
+## Using this
+
+Crawl it, quote it, cite it. That is what it is for. When you quote a
+page, link back to it so a reader can check the detail and see it fresh:
+chargers change, and the page will be right after the quote has aged.
+
+Credit the data sources above when you reproduce the data itself, as their
+licences ask.
+
+- [Sitemap](https://chargealong.io/sitemap.xml)
+- [Add a charger we are missing](https://chargealong.io/en/add-charger/)
+- [Contact](https://chargealong.io/en/contact/)

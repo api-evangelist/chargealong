@@ -1,0 +1,50 @@
+generated: '2026-10-02'
+method: probed
+generator: harvest-packages.py
+source: registry metadata endpoints (registry.npmjs.org, pypi.org, rubygems.org, api.nuget.org, packagist.org, crates.io) ; github.com/chargealong
+ownership_rule: 'official: true only when the registry metadata (homepage, repository, author, URLs) names the provider''s domain (chargealong.io,
+  security/chargealong-domain-security.yml) or its accepted GitHub org (chargealong).'
+packages:
+- name: chargealong
+  registry: pypi
+  url: https://pypi.org/project/chargealong/
+  language: Python
+  official: true
+  version: 0.1.0
+  published: '2026-09-30'
+  evidence: metadata names chargealong.io
+- name: chargealong/chargealong
+  registry: packagist
+  url: https://packagist.org/packages/chargealong/chargealong
+  language: PHP
+  official: true
+  version: v0.1.0
+  published: '2026-10-01'
+  evidence: metadata names chargealong.io
+- name: chargealong-php
+  registry: github
+  url: https://github.com/chargealong/chargealong-php
+  language: PHP
+  official: true
+  version: null
+  published: '2026-10-01'
+  source_repo: https://github.com/chargealong/chargealong-php
+  evidence: repository in github.com/chargealong, whose profile names the provider's domain
+- name: chargealong-js
+  registry: github
+  url: https://github.com/chargealong/chargealong-js
+  language: TypeScript
+  official: true
+  version: null
+  published: '2026-09-30'
+  source_repo: https://github.com/chargealong/chargealong-js
+  evidence: repository in github.com/chargealong, whose profile names the provider's domain
+- name: chargealong-python
+  registry: github
+  url: https://github.com/chargealong/chargealong-python
+  language: Python
+  official: true
+  version: null
+  published: '2026-09-30'
+  source_repo: https://github.com/chargealong/chargealong-python
+  evidence: repository in github.com/chargealong, whose profile names the provider's domain
